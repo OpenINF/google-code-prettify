@@ -1,9 +1,12 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "automerge": true,
   "extends": [
     "config:base",
-    ":semanticCommitTypeAll(chore)"
+    ":semanticCommitTypeAll(chore)",
+    "schedule:earlyMondays"
   ],
+  "groupName": "all",
   "ignorePresets": [
     ":prHourlyLimit2"
   ],
@@ -14,8 +17,7 @@
         "patch",
         "pin",
         "digest"
-      ],
-      "automerge": true
+      ]
     }
   ]
 }
